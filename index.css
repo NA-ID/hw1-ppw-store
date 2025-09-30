@@ -126,6 +126,10 @@ header {
   flex-direction: column;
   align-items: center;
   align-self: stretch;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -137,6 +141,7 @@ header {
   align-items: center;
   gap: 1rem;
   align-self: stretch;
+  width: 100%;
 }
 
 .logo {
@@ -152,8 +157,7 @@ header {
   align-items: center;
 }
 
-.navbar-menu,
-.dropdown-menu {
+.navbar-menu {
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -165,14 +169,8 @@ header {
   font-weight: 400;
 }
 
-.dropdown-menu {
-  display: none;
-}
-
 .navbar-item,
-.dropdown-item,
-.navbar-item a,
-.dropdown-item a {
+.navbar-item a {
   text-decoration: none;
   color: var(--gray-100);
 }
