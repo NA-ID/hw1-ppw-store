@@ -32,7 +32,7 @@ hw1-ppw-store/
 ├── content/
 ├── pages/
 ├── index.html
-├── style.css
+├── index.css
 └── readme.md
 ```
 
