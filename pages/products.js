@@ -42,6 +42,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initialize with all products shown
     showProductsInTab('all');
 });
