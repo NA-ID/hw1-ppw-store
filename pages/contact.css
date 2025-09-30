@@ -317,7 +317,7 @@ main h1 {
 
 /* CONTACT FORM CSS */
 .contact-form {
-  background-color: white;
+  background-color: var(--gray-100);
   padding: 3rem;
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -368,7 +368,7 @@ main h1 {
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--blue-500);
-  background-color: white;
+  background-color: var(--gray-100);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(19, 64, 116, 0.2);
 }
@@ -376,7 +376,7 @@ main h1 {
 .contact-form input:hover,
 .contact-form textarea:hover {
   border-color: var(--blue-300);
-  background-color: white;
+  background-color: var(--gray-100);
 }
 
 .contact-form textarea {
@@ -387,7 +387,7 @@ main h1 {
 
 .contact-form button {
   background: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-700) 100%);
-  color: white;
+  color: var(--gray-100);
   border: none;
   padding: 1rem 2rem;
   font-size: 1.1rem;
