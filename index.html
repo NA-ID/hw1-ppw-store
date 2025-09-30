@@ -74,31 +74,35 @@
     </header>
 
     <main>
-      <section class="hero">
-        <img
-          src="./assets/hero/7fa59291-2801-455d-8fa2-645322d75e4a.jpg.jpeg"
-          alt="Hero Images" />
-        <div class="left">
-          <svg
-            class="icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            fill="none">
-            <path
-              d="M20.5466 22.1067L14.44 16L20.5466 9.88L18.6666 8L10.6666 16L18.6666 24L20.5466 22.1067Z"
-              fill="currentColor" />
-          </svg>
-        </div>
-        <div class="right">
-          <svg
-            class="icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            fill="none">
-            <path
-              d="M11.4534 22.1067L17.56 16L11.4534 9.88L13.3334 8L21.3334 16L13.3334 24L11.4534 22.1067Z"
-              fill="currentColor" />
-          </svg>
+      <section class="hero" aria-label="Hero carousel">
+        <div class="carousel" data-autoplay="true" data-interval="5000">
+          <div class="track" role="list"></div>
+
+          <button class="left" type="button">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              fill="none">
+              <path
+                d="M20.5466 22.1067L14.44 16L20.5466 9.88L18.6666 8L10.6666 16L18.6666 24L20.5466 22.1067Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+
+          <button class="right" type="button">
+            <svg
+              class="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              fill="none">
+              <path
+                d="M11.4534 22.1067L17.56 16L11.4534 9.88L13.3334 8L21.3334 16L13.3334 24L11.4534 22.1067Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+
+          <div class="dots"></div>
         </div>
       </section>
       <section class="new-products">
@@ -260,5 +264,6 @@
         </div>
       </div>
     </footer>
+    <script src="carousel.js"></script>
   </body>
 </html>

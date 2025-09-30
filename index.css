@@ -230,6 +230,7 @@ main {
   position: relative;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .hero img {
@@ -238,49 +239,66 @@ main {
   object-fit: cover;
 }
 
-.hero .left {
-  position: absolute;
-  top: 50%;
-  left: 2.5%;
-  transform: translate(-50%, -50%);
-  width: 5vw;
-  height: 100%;
-  color: var(--gray-100);
-  background: linear-gradient(270deg, rgba(36, 39, 42, 0.00) 0%, #24272A 100%);
+.hero .track {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+  width: 100%;
+  transition: transform 500ms ease;
 }
 
-.hero .left:active {
-  transform: translate(-50%, -50%) scale(0.95);
+.hero .slide {
+  flex: 0 0 100%;
+  width: 100%;
 }
 
+.hero .slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.hero .left,
 .hero .right {
   position: absolute;
   top: 50%;
-  right: 2.5%;
-  transform: translate(50%, -50%);
-  width: 5vw;
-  height: 100%;
-  color: var(--gray-100);
-  background: linear-gradient(90deg, rgba(36, 39, 42, 0.00) 0%, #24272A 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: color-mix(in srgb, #000 40%, transparent);
+  color: #fff;
+  display: grid;
+  place-items: center;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero .left {
+  left: 12px;
+}
+
+.hero .right {
+  right: 12px;
+}
+
+.hero .left:hover,
+.hero .right:hover {
+  background: color-mix(in srgb, #000 55%, transparent);
+}
+
+.hero .left:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .hero .right:active {
-  transform: translate(50%, -50%) scale(0.95);
+  transform: translateY(-50%) scale(0.95);
 }
 
 .hero .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -295,6 +313,38 @@ main {
 .hero .right:active .icon {
   transform: scale(1.1);
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+.hero .dots {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  padding: 0;
+}
+
+.hero .dot.active {
+  background: #fff;
+  width: 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .track {
+    transition: none;
+  }
 }
 
 
@@ -394,6 +444,7 @@ main {
   font-weight: 600;
   border: none;
   border-radius: 0.75rem;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
