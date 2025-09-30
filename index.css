@@ -14,14 +14,14 @@
   --green-300: #d3ddb9;
   --green-100: #e9f0d4;
   --gray-900: #080708;
-  --gray-700: #0d0c0e;
-  --gray-500: #121113;
-  --gray-300: #858587;
+  --gray-700: #595C5E;
+  --gray-500: #8E9092;
+  --gray-300: #C3C5C6;
   --gray-100: #f8f9fa;
 }
 
-/* CSS RESET */
 
+/* CSS RESET */
 *,
 *::before,
 *::after {
@@ -101,6 +101,7 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+
 /* GLOBAL */
 * {
   margin: 0;
@@ -117,6 +118,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 
 /* HEADER NAVBAR CSS */
 header {
@@ -182,6 +184,7 @@ header {
   text-decoration-thickness: 0.1rem;
 }
 
+
 /* MAIN CONTENT CSS */
 main {
   display: flex;
@@ -191,6 +194,7 @@ main {
   align-self: stretch;
 }
 
+/* HERO SECTION */
 .hero {
   position: relative;
   width: 100%;
@@ -236,6 +240,133 @@ main {
   height: 2.5rem;
   cursor: pointer;
 }
+
+
+/* NEW PRODUCTS SECTION */
+.new-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-self: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+.new-products h1{
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Montserrat", "Inter", Arial, Helvetica, sans-serif;
+}
+
+.product-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  align-self: stretch;
+}
+
+.product-card {
+  background-color: var(--gray-300);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.product-image {
+  width: 24rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 0.25rem;
+}
+
+.product-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+  font-weight: 600;
+}
+
+.title-badge {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--blue-100);
+  border-radius: 1rem;
+}
+
+.title-name {
+  font-size: 1.5rem;
+  color: var(--gray-900);
+  text-align: left;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.new-products .view-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: var(--gray-900);
+  color: var(--gray-100);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+}
+
+.new-products .view-more:hover {
+  background: var(--blue-700);
+  cursor: pointer;
+}
+
+.left-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(248, 249, 250, 0.00) 0%, #F8F9FA 89.9%);
+  z-index: 1;
+}
+
+.right-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(248, 249, 250, 0.00) 0%, #F8F9FA 89.9%);
+  z-index: 1;
+}
+
+
+
 
 /* FOOTER CSS */
 footer {
